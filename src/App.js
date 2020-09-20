@@ -7,9 +7,7 @@ const subtract1 = function (x) {
 function add1(x) {
   return x + 1
 }
-const reset = function (x) {
-  return (x = 0)
-}
+const reset = () => 0
 
 function App() {
   let state = useState(0)
@@ -39,7 +37,7 @@ function App() {
 
       <button
         onClick={() => {
-          const newCounterValue = reset(counter)
+          const newCounterValue = reset()
           setcounter(newCounterValue)
         }}
       >
