@@ -15,34 +15,39 @@ function App() {
   let setcounter = state[1]
 
   return (
-    <div>
-      <div>{counter}</div>
-      <button
-        onClick={() => {
-          const newCounterValue = add1(counter)
-          setcounter(newCounterValue)
-        }}
-      >
-        Add One
-      </button>
+    <div className="everything">
+      <div className="counter">{counter}</div>
+      <div className="buttons">
+        <button
+          className="btn"
+          onClick={() => {
+            const newCounterValue = add1(counter)
+            setcounter(newCounterValue)
+          }}
+        >
+          Add One
+        </button>
 
-      <button
-        onClick={() => {
-          const newCounterValue = subtract1(counter)
-          setcounter(newCounterValue)
-        }}
-      >
-        Subtract One
-      </button>
+        <button
+          className="btn"
+          onClick={() => {
+            const newCounterValue = subtract1(counter)
+            setcounter(newCounterValue)
+          }}
+        >
+          Subtract One
+        </button>
 
-      <button
-        onClick={() => {
-          const newCounterValue = reset()
-          setcounter(newCounterValue)
-        }}
-      >
-        Reset
-      </button>
+        <button
+          className="btn"
+          onClick={() => {
+            const newCounterValue = reset()
+            setcounter(newCounterValue)
+          }}
+        >
+          Reset
+        </button>
+      </div>
     </div>
   )
 }
